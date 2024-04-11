@@ -12,12 +12,17 @@ const projects = [
     link: "./Palindrome checker/",
   },
 ];
-projects.map((project) => {
-  const li = document.createElement("li");
-  li.classList.add("card");
-  li.innerHTML = `
-    <h3>${project.title}</h3>
-    <a href="${project.link}">Go</a>
-    `;
-  card_lists.appendChild(li);
-});
+
+const init = () => {
+  projects.map((project) => {
+    const li = document.createElement("li");
+    li.classList.add("card");
+    li.innerHTML = `
+        <h3>${project.title}</h3>
+        <a href="${project.link}">Go</a>
+        `;
+    card_lists.appendChild(li);
+  });
+};
+
+init();
